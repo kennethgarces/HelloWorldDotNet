@@ -1,24 +1,24 @@
 pipeline {
          agent any
          stages {
-                 stage('One') {
+                 stage('Build') {
                  steps {
                      echo 'Hi, this is Kenneth'
                  }
                  }
-                 stage('Two') {
+                 stage('Test') {
                  steps {
                     input('Do you want to proceed?')
                  }
                  }
-                 stage('Three') {
+                 stage('Deploy') {
                  when {
                        not {
                             branch "master"
                        }
                  }
                  steps {
-                       echo "Hello"
+                       echo "End"
                  }
                  }
 

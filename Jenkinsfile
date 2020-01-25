@@ -3,6 +3,7 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
+                     dotnet run
                      echo 'This is the build stage'
                  }
                  }

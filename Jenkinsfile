@@ -12,14 +12,8 @@ pipeline {
                  }
                  }
                  stage('Deploy') {
-                 when {
-                       not {
-                            branch "master"
-                            echo "Not master branch"
-                       }
-                 }
                  steps {
-                       echo "Master branch"
+                    input('Unit Testing')
                  }
                  }
 

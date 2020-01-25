@@ -3,22 +3,23 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
-                     echo 'Hi, this is Kenneth'
+                     echo 'This is the build stage'
                  }
                  }
                  stage('Test') {
                  steps {
-                    input('Do you want to proceed?')
+                    input('Unit Testing')
                  }
                  }
                  stage('Deploy') {
                  when {
                        not {
                             branch "master"
+                            echo "Not master branch"
                        }
                  }
                  steps {
-                       echo "End"
+                       echo "Master branch"
                  }
                  }
 

@@ -1,17 +1,26 @@
 pipeline {
          agent any
-         node {
-	stage 'Checkout'
-		checkout scm
+         stages {
+                 stage('Build') {
+                 steps {
+                     echo 'Hi, this is Kenneth'
+                 }
+                 }
+                 stage('Test') {
+                 steps {
+                    input('Do you want to proceed?')
+                 }
+                 }
+                 stage('Deploy') {
+                 when {
+                       not {
+                            branch "master"
+                       }
+                 }
+                 steps {
+                       echo "End"
+                 }
+                 }
 
-	stage 'Build'
-		bat 'nuget restore SolutionName.sln'
-		bat "\"${tool 'MSBuild'}\" SolutionName.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
-
-	stage 'Archive'
-		archive 'ProjectName/bin/Release/**'
-
+              }
 }
-}
-
-

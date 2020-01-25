@@ -1,4 +1,6 @@
-node {
+pipeline {
+         agent any
+         node {
 	stage 'Checkout'
 		checkout scm
 
@@ -10,3 +12,6 @@ node {
 		archive 'ProjectName/bin/Release/**'
 
 }
+}
+
+

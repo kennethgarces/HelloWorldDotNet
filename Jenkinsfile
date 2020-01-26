@@ -14,7 +14,7 @@ pipeline {
                  }
                  stage('Test') {
                  steps {
-                    input('Deployt to Test')
+                    input('Deploy to Test')
                  }
                  }
                   stage('Deploy') {

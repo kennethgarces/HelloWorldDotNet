@@ -4,9 +4,7 @@ pipeline {
                  stage('Build') {
                  steps {
                      
-                     sh "#!/bin/bash \n" + 
-                        "echo \"Executing run.sh from \$SHELL\"" 
-                     sh "./run.sh"
+                     msbuild /DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj
                         
                      
                  }

@@ -1,5 +1,0 @@
-Pipeline step 1 is build
-Pipeline step 2 is unit
-Pipeline step 3 is test
-Pipeline step 4 is deploy
-Hello World!!!!

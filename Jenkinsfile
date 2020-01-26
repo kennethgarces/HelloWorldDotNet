@@ -9,7 +9,8 @@ pipeline {
                  steps {
                      
                      //sh 'dotnet build /Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj'
-                     input('Perform Build')
+                     //input('Perform Build')
+                     sh './run.sh'
                         
                      
                  }

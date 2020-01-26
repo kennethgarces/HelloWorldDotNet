@@ -3,10 +3,10 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
-                     node {
-                        sh "#!/bin/bash \n" + 
-                           "echo \"Hello from \$SHELL\""
-                     }
+                     
+                     sh "#!/bin/bash \n" + 
+                        "echo \"Hello from \$SHELL\""
+                     
                  }
                  }
                  stage('Unit') {

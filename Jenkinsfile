@@ -1,3 +1,7 @@
+environment {
+   HOME = '/tmp'
+} 
+
 pipeline {
          agent any
          stages {

@@ -3,7 +3,7 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
-                     dotnet run
+                     
                      echo 'Build .NET'
                  }
                  }

@@ -1,5 +1,5 @@
 
-# HellWorldDotNet
+# HelloWorldDotNet
 
 Example .NET package
 

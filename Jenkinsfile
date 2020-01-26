@@ -5,8 +5,8 @@ pipeline {
                  steps {
                      
                      sh "#!/bin/bash \n" + 
-                        "echo \"Executing run.sh from \$SHELL\"" +
-                        "./run.sh"
+                        "echo \"Executing run.sh from \$SHELL\"" 
+                     sh "./run.sh"
                         
                      
                  }

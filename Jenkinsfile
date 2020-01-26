@@ -7,7 +7,6 @@ pipeline {
                         sh "#!/bin/bash \n" + 
                            "echo \"Hello from \$SHELL\""
                      }
-                     echo 'Build .NET'
                  }
                  }
                  stage('Unit') {

@@ -3,7 +3,10 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
-                     
+                     node {
+                        sh "#!/bin/bash \n" + 
+                           "echo \"Hello from \$SHELL\""
+                     }
                      echo 'Build .NET'
                  }
                  }

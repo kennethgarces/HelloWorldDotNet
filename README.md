@@ -387,6 +387,78 @@ Setup first user 'kgarces'
 
 Start using Jenkins at http://localhost:8080/
 
-## 
+## Error message / current state 
+
+Started by user Kenneth
+Obtained Jenkinsfile from git https://github.com/kennethgarces/kenneth-garces-dot-net
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /Users/kgarces-sa/.jenkins/workspace/DOTNET PIPELINE
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 25a1b49f-8343-4a54-92ff-f8bb4ef18846
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kennethgarces/kenneth-garces-dot-net # timeout=10
+Fetching upstream changes from https://github.com/kennethgarces/kenneth-garces-dot-net
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/kennethgarces/kenneth-garces-dot-net +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 5956f81fc004cc762769237f5f9e1b4f201a6e26 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5956f81fc004cc762769237f5f9e1b4f201a6e26 # timeout=10
+Commit message: "Jenkins file"
+ > git rev-list --no-walk a246c8b251ff0eb831e664370e175ac8426c38d6 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ dotnet build /Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj
+Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+/usr/local/share/dotnet/sdk/3.1.101/NuGet.targets(123,5): error : Access to the path '/Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/obj/DotNetHelloWorld.csproj.nuget.dgspec.json' is denied. [/Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj]
+/usr/local/share/dotnet/sdk/3.1.101/NuGet.targets(123,5): error :   Permission denied [/Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj]
+
+Build FAILED.
+
+/usr/local/share/dotnet/sdk/3.1.101/NuGet.targets(123,5): error : Access to the path '/Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/obj/DotNetHelloWorld.csproj.nuget.dgspec.json' is denied. [/Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj]
+/usr/local/share/dotnet/sdk/3.1.101/NuGet.targets(123,5): error :   Permission denied [/Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.57
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Unit)
+Stage "Unit" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE
 
 

@@ -4,17 +4,22 @@ pipeline {
                  stage('Build') {
                  steps {
                      dotnet run
-                     echo 'This is the build stage'
+                     echo 'Build .NET'
+                 }
+                 }
+                 stage('Unit') {
+                 steps {
+                    input('Perform Unit Testing')
                  }
                  }
                  stage('Test') {
                  steps {
-                    input('Unit Testing')
+                    input('Deployt to Test')
                  }
                  }
-                 stage('Deploy') {
+                  stage('Deploy') {
                  steps {
-                    input('Unit Testing')
+                    input('Deploy to Prod')
                  }
                  }
 

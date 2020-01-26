@@ -6,7 +6,14 @@ namespace DotNetHelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var i = 0;
+            foreach (var arg in args)
+            {
+                i=i+1;
+                Console.WriteLine($"Pipeline step {i} is {arg}");
+            }
+            Console.WriteLine("Hello World!!!!");
+            
         }
     }
 }

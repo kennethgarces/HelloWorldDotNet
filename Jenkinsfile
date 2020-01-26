@@ -4,7 +4,7 @@ pipeline {
                  stage('Build') {
                  steps {
                      
-                     sh 'dotnet build /DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj'
+                     sh 'dotnet build {/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj}'
                         
                      
                  }

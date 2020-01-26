@@ -15,7 +15,7 @@ Script can be invoked by running Run.sh
 
 ### Description
 
-You will be prompted to enter 4 build steps.  The inputs will be read and output to console.  Pipeline will begin executing.  Message Hello World will confirm successful exeuction.
+You will specify the build steps in the Jenkins file (dotnet run build step 1, build step2, build step 3, build step4).  Message Hello World will confirm successful exeuction and display build steps.  Example.  dotnet run build unit test deploy
 
 ### Result/Test
 

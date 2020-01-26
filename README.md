@@ -464,3 +464,37 @@ ERROR: script returned exit code 1
 Finished: FAILURE
 
 
+## Build successful on local
+
+$ ./run.sh
+Process .NET pipeline has started!!!.
+Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 24.48 ms for /Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj.
+  DotNetHelloWorld -> /Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/bin/Debug/netcoreapp3.1/DotNetHelloWorld.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.83
+
+$ ./run.sh
+Process .NET pipeline has started!!!.
+Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 26.19 ms for /Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/DotNetHelloWorld.csproj.
+  DotNetHelloWorld -> /Users/kgarces/Projects/HelloWorldDotNet/DotNetHelloWorld/DotNetHelloWorld/bin/Debug/netcoreapp3.1/DotNetHelloWorld.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.86
+Pipeline step 1 is build
+Pipeline step 2 is unit
+Pipeline step 3 is test
+Pipeline step 4 is deploy
+Hello World!!!!
